@@ -1,0 +1,153 @@
+<div class="content-block">
+<h1>INTRODUCTION</h1>
+<p>A python script to track 
+    your daily spendings and automaticaly 
+    update your savings with a well
+    defined query mechanism</p>
+</div>
+<div>
+<pre><code class="language-python">
+# Python code here...
+#importing libarary and setting up connection
+import mysql.connector
+mycon=mysql.connector.connect(user='root',host='localhost',database='finance',password='######')
+
+def viewspending() :
+    cur=mycon.cursor()
+    cur.execute('select Sl_No,date(date_of_entry),type,amount,des_cription from spendings order by Sl_No desc;')
+    al_=input('Want to print All spendig:')
+    if al_!='' :
+        data=cur.fetchall()
+    else:
+        ma_=input('No. of records:')
+        if ma_.isdigit() :
+
+            ma_=int(ma_)
+            data=cur.fetchmany(ma_)
+        else :
+            print('No Valid Entry !')
+    if data:
+        print('Sl     DATE      TYPE      AMOUNT    COMMENT')
+        for row in data :
+            print(f'{row[0]} | {row[1]} |  {row[2]}  | {row[3]} | {row[4]}')
+
+def addspending() :
+
+    global typ_e , am
+    while True:
+        ty=input('Type:')
+        am=float(input('Amount (upto two decimal) :'))
+        words=['basics','food','clothes','education','travel','accidental','random']
+        for i in range(len(ty)-2):
+            ty=ty[i:]
+            for word in words :
+                if ty in word :
+                    typ_e=word   
+        descp=input('Comments:')
+        cur=mycon.cursor()
+        query='insert into spendings(type,amount,des_cription) values(%s,%s,%s) '
+        values=(typ_e,am,descp)
+        cur.execute(query,values)
+        mycon.commit()
+        internal()
+        w=input('ADD MORE')
+        if w!='' :
+
+            continue
+        else:
+            
+            break
+
+def internal() :
+    global typ_e , am
+    source=f'sp-{typ_e}'
+    cur=mycon.cursor()
+    cur.execute('select type from amount ;')
+    data=cur.fetchall()
+    ty_list=[row[0] for row in data]
+    if typ_e not in ty_list :
+        typ_e='saving'
+    am=0-am
+    data=(source,typ_e,am)
+    query='insert into amount(source,type,amount) values(%s,%s,%s) ; '
+    cur.execute(query,data)
+    mycon.commit()
+
+
+
+
+def addamount() :
+    while True :
+        so=input('Source:')
+        typ=input('Purpose:')
+        amo=float(input('Amount:'))
+        query='insert into amount(source,type,amount) values(%s,%s,%s) ;'
+        data=(so,typ,amo)
+        cur=mycon.cursor()
+        cur.execute(query,data)
+        mycon.commit()
+        w=input('ADD MORE')
+        if w!='' :
+
+            continue
+        else:
+            
+            break
+
+def viewamount() :
+    while True :
+        so=input('Source:')
+        typ=input('Purpose:')
+        if so!='' and typ !='' :
+            query=f'select sum(amount) from amount where source=\'{so}\' and type=\'{typ}\' ;'
+        elif so != '' :
+            query=f'select sum(amount) from amount where source=\'{so}\';'
+        elif typ !='' :
+            query=f'select sum(amount) from amount where type=\'{typ}\' ;'
+        else :
+            query='select sum(amount) from amount ;'
+        cur=mycon.cursor()
+        cur.execute(query)
+        data=cur.fetchone()
+        print(f'Amount for the above filter:{data[0]}')
+        w=input('SEE MORE')
+        if w!='' :
+
+            continue
+        else:
+            
+            break
+
+def main() :
+    while True :
+        v=input("View Spending:")
+        if v !='' :
+            viewspending()
+        else:
+            d=input('Add Spending:')
+            if d != '' :
+                addspending()
+            else :
+                va=input('View Amount:')
+                if va!='' :
+                    viewamount()
+                else:
+                    aa=input('Add Amount:')
+                    if aa!='' :
+                        addamount()
+                    else :
+                        ex=input('Exit:')
+                        if ex!='' :
+                            break
+                        else:
+                            continue
+
+main()
+
+      </code></pre>
+</div>
+ ✅ Prism Core JS 
+
+ ✅ Python language component 
+
+ ✅ Copy to clipboard plugin
