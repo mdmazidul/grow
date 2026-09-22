@@ -1,0 +1,119 @@
+<div class="content-block">
+<h1>INTRODUCTION</h1>
+<p>This is a python script which allow you to text
+    your love one infront of everyone. As you'll type it will automatically
+    convert your word in a coded language and you can customised it too
+    The executable fiel I'll upload soon...just a networking issue...
+    You can use this below code</p>
+</div>
+<div>
+<pre><code class="language-python">
+#project 13
+import tkinter as tk
+from tkinter import scrolledtext
+import os
+
+# Custom encryption map
+custom_encryption_map = {
+    'A': '4', 'B': '8', 'E': '3', 'I': '1', 'O': '0',
+    'S': '5', 'Z': '2', 'H': '#', 'D': '|)', 'G': '9'
+}
+
+# Function to apply the custom encryption
+def encrypt_message(message):
+    encrypted = ""
+    for char in message.upper():  # Convert input to uppercase
+        if char in custom_encryption_map:
+            encrypted += custom_encryption_map[char]
+        else:
+            encrypted += char  # If the character is not in the map, keep it as is
+    return encrypted
+
+# Function to send message and store it (color and encryption)
+def send_message(user):
+    message = message_entry.get()
+    
+    if not message.strip():
+        return  # Ignore empty messages
+    
+    encrypted_message = encrypt_message(message)  # Encrypt using the custom map
+    
+    # Display the encrypted message in the chat window with different colors for each user
+    chat_box.config(state=tk.NORMAL)
+    if user == "You":
+        chat_box.insert(tk.END, f"\nYou: {encrypted_message}\n", "you")
+    else:
+        chat_box.insert(tk.END, f"\nFriend: {encrypted_message}\n", "friend")
+    chat_box.config(state=tk.DISABLED)
+
+    # Save encrypted message to file
+    with open(r"C:\Users\acer\Desktop\M\ROUGH\myfile.txt", "a") as file:
+        file.write(f"{user}: {encrypted_message}\n")
+    
+    message_entry.delete(0, tk.END)
+
+# Function to load previous chat history
+def load_chat_history():
+    if os.path.exists(r"C:\Users\acer\Desktop\M\ROUGH\myfile.txt"):
+        chat_box.config(state=tk.NORMAL)
+        with open(r"C:\Users\acer\Desktop\M\ROUGH\myfile.txt", "r") as file:
+            for line in file:
+                line = line.strip()
+                if line:  # Check if the line is not empty
+                    if ": " in line:  # Ensure the line is formatted correctly
+                        user, encrypted_message = line.split(": ", 1)
+                        # Display the stored encrypted messages
+                        if user == "You":
+                            chat_box.insert(tk.END, f"\nYou: {encrypted_message}\n", "you")
+                        else:
+                            chat_box.insert(tk.END, f"\nFriend: {encrypted_message}\n", "friend")
+                    else:
+                        print(f"Invalid line format: {line}")  # Handle invalid lines
+        chat_box.config(state=tk.DISABLED)
+
+# Setting up the Tkinter window
+root = tk.Tk()
+root.title("TEXT ME")
+
+# Set window size and background color
+root.geometry("500x450")
+root.config(bg='#FFB6C1')
+
+# Label for instructions
+instructions_label = tk.Label(root, text="TYPE YOUR MESSAGE BELOW AND CLICK ON 'SEND':", bg='#FFB6C1', font=('Arial Bold', 12), fg='#FF0000')
+instructions_label.grid(row=0, column=0, columnspan=2, padx=10, pady=5)
+
+# Chat box to display messages
+chat_box = scrolledtext.ScrolledText(root, state='disabled', wrap=tk.WORD, width=50, height=15, bg='#F0F0F0', font=('Dancing Script', 12))
+chat_box.grid(row=1, column=0, padx=10, pady=10, columnspan=2)
+
+# Add color tags for each user and set bold formatting
+chat_box.tag_config("you", foreground="#FF1493", font=('Arial', 12, 'bold'))  # Your messages will appear in bold pink
+chat_box.tag_config("friend", foreground="#DC143C", font=('Dancing Script', 14))  # Friend's messages will appear in bold red
+
+# Entry box for typing messages
+message_entry = tk.Entry(root, width=40, font=('Arial', 12))
+message_entry.grid(row=2, column=0, padx=10, pady=10)
+
+# Button to send message as "You"
+send_button = tk.Button(root, text="SEND", width=10, bg='#008CBA', fg='white', font=('Dancing Script', 10, 'bold'), command=lambda: send_message("You"))
+send_button.grid(row=2, column=1, padx=10, pady=10)
+
+# Button to send message as "Friend" (to simulate another person)
+friend_send_button = tk.Button(root, text="FRIEND SEND", width=10, bg='#4CAF50', fg='white', font=('Arial Bold', 10), command=lambda: send_message("Friend"))
+friend_send_button.grid(row=3, column=1, padx=10, pady=5)
+
+# Load previous chat history if available
+load_chat_history()
+
+# Run the Tkinter loop
+root.mainloop()
+
+
+      </code></pre>
+</div>
+ ✅ Prism Core JS 
+
+ ✅ Python language component 
+
+ ✅ Copy to clipboard plugin
