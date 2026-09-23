@@ -47,7 +47,7 @@
   font-family: var(--f-serif);
   font-size: clamp(1.25rem, 3vw, 1.7rem);
   line-height: 1.45;
-  color: var(--amber);
+  color: goldenyellow;
   font-style: italic;
 }
 .story-content {
