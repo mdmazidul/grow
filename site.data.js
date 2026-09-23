@@ -14,11 +14,11 @@ const SITE = {
       "The goal is simple: learn seriously, build openly, and improve one project at a time."
     ],
     education: [
-      { title: "B.Sc. Statistics", place: "Pondicherry University Centre, Andaman", years: "Current" },
-      { title: "Higher Secondary — Science & Computer Science", place: "CBSE", years: "Completed" }
+      { title: "B.Sc. Statistics", place: "Pachhunga University College, Aizawl", years: "Current" },
+      { title: "Higher Secondary — Science & Computer Science", place: "JNV Dhubri", years: "Completed" }
     ],
-    interests: ["Statistics","Data analysis","Python","SQL","Finance","Entrepreneurship","Writing","Photography"],
-    courses: ["Add your completed courses here"]
+    interests: ["Statistics","Data analysis","Python","SQL","Finance","Entrepreneurship","Writing",],
+    courses: ["Python","SQL"]
   },
 
   projects: [
@@ -43,27 +43,15 @@ const SITE = {
       date:"2024-10", tags:["python","tkinter","cryptography"],
       content:"content/projects/coded-conversation.html", featured:true
     },
-    {
-      slug:"pandas-notes", title:"Learning pandas",
-      category:"Reference Notes",
-      summary:"Working notes on Series, DataFrames, indexing and core pandas operations used in data analysis.",
-      date:"2024-09", tags:["python","pandas","notes"],
-      content:"content/projects/pandas-notes.html", featured:true
-    },
-    {
-      slug:"numpy-notes", title:"Learning NumPy",
-      category:"Reference Notes",
-      summary:"Practical notes on arrays, vectorisation and basic NumPy operations.",
-      date:"2024-08", tags:["python","numpy","notes"],
-      content:"content/projects/numpy-notes.html", featured:true
-    }
+    
+   
   ],
 
   writings: [
     {
-      slug:"starting-this-space", title:"Starting this space", category:"Note",
-      excerpt:"Why I am building a public archive of my learning, projects and writing.",
-      date:"2026-09", readMins:2, content:"content/writings/starting-this-space.html"
+      slug:"The God Who Watches", title:"God Who watches", category:"Note",
+      excerpt:"Illustrating the Contradiction of omni and saviour nature of God through a story, a conversation",
+      date:"2026-09", readMins:3, content:"content/writings/the_god_who_watches.html"
     }
   ],
 
