@@ -64,7 +64,7 @@ function renderHome(){
 }
 function renderProjects(){
  const ps=sortNewest(read("projects")), cats=["All",...new Set(ps.map(p=>p.category))];
- shell("Projects","projects",pageIntro("WORK","Projects","Data analysis, Python tools, statistical work and research notes — five projects selected as the public portfolio.")+
+ shell("Projects","projects",pageIntro("WORK","Projects","Data analysis, Python tools, statistical work and research notes ")+
  `<main class="wrap section"><div class="chips">${cats.map(c=>`<button class="chip ${c==="All"?"is-active":""}" data-filter="${esc(c)}">${esc(c)}</button>`).join("")}</div><div class="work-grid">${ps.map((p,i)=>`<div data-category="${esc(p.category)}">${projectCard(p,i)}</div>`).join("")}</div></main>`);
 }
 function renderWriting(){
