@@ -49,7 +49,7 @@ const SITE = {
 
   writings: [
     {
-      slug:"The God Who Watches", title:"God Who watches", category:"Note",
+      slug:"The God Who Watches", title:"God Who watches", category:"Story",
       excerpt:"Illustrating the Contradiction of omni and saviour nature of God through a story, a conversation",
       date:"2026-09", readMins:3, content:"content/writings/the_god_who_watches.html"
     }
