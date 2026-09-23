@@ -49,7 +49,7 @@ const SITE = {
 
   writings: [
     {
-      slug:"The God Who Watches", title:"God Who watches", category:"Story",
+      slug:"The God Who Watches", title:"The God Who watches", category:"Story",
       excerpt:"Illustrating the Contradiction of Omni and Saviour nature of God through a story of grief",
       date:"2026-09", readMins:3, content:"content/writings/the_god_who_watches.html"
     }
