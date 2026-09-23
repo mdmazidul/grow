@@ -4,7 +4,7 @@ const SITE = {
     role: "Statistics Student • Data & Python",
     location: "India",
     tagline: "I study statistics, build with Python, and turn real-world data into useful stories.",
-    photo: "assets/images/profile-placeholder.svg",
+    photo: "assets/images/profile_photo.JPG",
     email: "mazidulrough@gmail.com",
     linkedin: "https://www.linkedin.com/in/md-islam-374926356",
     instagram: "https://www.instagram.com/__.mazidul.__/",
