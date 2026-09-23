@@ -35,16 +35,19 @@
 .story-epigraph {
   max-width: 680px;
   margin: 48px auto 54px;
-  padding: 24px 28px;
-  border-left: 3px solid var(--amber);
-  background: rgba(255,197,61,.045);
+  padding: 28px 32px;
+  border-left: 4px solid var(--amber);
+  background: var(--ink-800);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
 }
+
 .story-epigraph p {
   margin: 0;
   font-family: var(--f-serif);
   font-size: clamp(1.25rem, 3vw, 1.7rem);
   line-height: 1.45;
-  color: var(--text-hi);
+  color: var(--amber);
   font-style: italic;
 }
 .story-content {
