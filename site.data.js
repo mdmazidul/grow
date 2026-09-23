@@ -8,6 +8,7 @@ const SITE = {
     email: "mazidulrough@gmail.com",
     linkedin: "https://www.linkedin.com/in/md-islam-374926356",
     instagram: "https://www.instagram.com/__.mazidul.__/",
+    Archieve: "https://mdmazidul.github.io/website/",
     bio: [
       "I am a B.Sc. Statistics student building this space as a public record of what I learn and create.",
       "Here you will find data-analysis projects, programming work, statistical notes, and writing that goes beyond code.",
