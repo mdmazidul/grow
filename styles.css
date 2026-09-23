@@ -37,7 +37,7 @@
   margin: 48px auto 54px;
   padding: 28px 32px;
   border-left: 4px solid var(--amber);
-  background: var(--ink-800);
+  background: linear-gradient(135deg, #fff9e6, #e6f0ff);
   border-radius: var(--radius-md);
   box-shadow: 0 10px 30px rgba(0,0,0,.18);
 }
