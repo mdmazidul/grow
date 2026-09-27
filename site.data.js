@@ -61,11 +61,7 @@ const SITE = {
     }
   ],
 
-  published: [{
-      slug:"TO MY LOVE", title:"TO MY LOVE", category:"LOVE LETTER",
-      excerpt:"Vanlalhmangaihzuala to his love of life : A love about devotion and imperfection ",
-      date:"2026-09", readMins:3, content:"content/writings/vanlal_love_letter.html"
-    }],
+  published: [],
   glimpses: [
     { caption:"A small visual archive of places, people and moments.", date:"2026", image:"assets/images/in-bird.jpeg" }
   ]
