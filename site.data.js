@@ -64,11 +64,7 @@ const SITE = {
       excerpt:"THROUGH HIS BREAHTAKING POEM,  NT MALSAWMA SHOWING GRATITUDE TO THE HILLS , WINNER OF COLLEGE WEEK 2026 PUC ",
       date:"2026-09", readMins:3, content:"content/writings/nt_hill.html"
     },
-    {
-      slug:"The Hills that Raised Me", title:"The Hills that Raised Me", category:"POEM",
-      excerpt:"THROUGH HIS BREAHTAKING POEM,  NT MALSAWMA SHOWING GRATITUDE TO THE HILLS , WINNER OF COLLEGE WEEK 2026 PUC ",
-      date:"2026-09", readMins:3, content:"content/writings/nt_hill.html"
-    },
+   
     {
       slug:"Tawanmang Par", title:"Tawanmang Par", category:"",
       excerpt:"Read NT's Mizo Poem",
