@@ -52,7 +52,12 @@ const SITE = {
     {
       slug:"The God Who Watches", title:"The God Who watches", category:"Story",
       excerpt:"Illustrating the Contradiction of Omni and Saviour nature of God through a story of grief",
-      date:"2026-09", readMins:3, content:"content/writings/the_god_who_watches.html"
+      date:"2026-09", readMins:7, content:"content/writings/the_god_who_watches.html"
+    },
+    {
+      slug:"TO MY LOVE", title:"TO MY LOVE", category:"LOVE LETTER",
+      excerpt:"Vanlalhmangaihzuala to his love of life : A love about devotion and imperfection ",
+      date:"2026-09", readMins:3, content:"content/writings/vanlal_love_letter.html"
     }
   ],
 
