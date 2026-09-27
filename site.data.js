@@ -58,7 +58,29 @@ const SITE = {
       slug:"TO MY LOVE", title:"TO MY LOVE", category:"LOVE LETTER",
       excerpt:"Vanlalhmangaihzuala to his love of life : A love about devotion and imperfection ",
       date:"2026-09", readMins:3, content:"content/writings/vanlal_love_letter.html"
-    }
+    },
+    {
+      slug:"The Hills that Raised Me", title:"The Hills that Raised Me", category:"POEM",
+      excerpt:"THROUGH HIS BREAHTAKING POEM,  NT MALSAWMA SHOWING GRATITUDE TO THE HILLS , WINNER OF COLLEGE WEEK 2026 PUC ",
+      date:"2026-09", readMins:3, content:"content/writings/nt_hill.html"
+    },
+    {
+      slug:"The Hills that Raised Me", title:"The Hills that Raised Me", category:"POEM",
+      excerpt:"THROUGH HIS BREAHTAKING POEM,  NT MALSAWMA SHOWING GRATITUDE TO THE HILLS , WINNER OF COLLEGE WEEK 2026 PUC ",
+      date:"2026-09", readMins:3, content:"content/writings/nt_hill.html"
+    },
+    {
+      slug:"Tawanmang Par", title:"Tawanmang Par", category:"",
+      excerpt:"Read NT's Mizo Poem",
+      date:"2026-09", readMins:3, content:"content/writings/nt_tawan.html"
+    },
+    {
+      slug:"The Moon", title:"The Moon", category:"",
+      excerpt:"Read NT's Poem on love , Editors choice ",
+      date:"2026-09", readMins:3, content:"content/writings/nt_moon.html"
+    },
+    
+    
   ],
 
   published: [],
