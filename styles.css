@@ -96,3 +96,45 @@
   .story-content p { line-height: 1.8; }
   .story-content .story-dialogue { padding-left: .9rem; }
 }
+
+/* Author ending for writing pages */
+.story-signature {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(27,23,16,.15);
+  text-align: center;
+}
+
+.story-signature > p:first-child {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+.story-author-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  border: 3px solid var(--amber);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.story-author-name {
+  margin: 0 auto;
+  font-family: var(--f-mono) !important;
+  font-size: .78rem !important;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #756b5d !important;
+}
+
+@media (max-width: 720px) {
+  .story-author-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
