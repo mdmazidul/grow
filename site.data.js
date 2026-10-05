@@ -75,7 +75,15 @@ const SITE = {
       excerpt:"Read NT's Poem on love , Editors choice ",
       date:"2026-09", readMins:3, content:"content/writings/nt_moon.html"
     },
-    
+    {
+  slug: "attributes-assignment",
+  title: "Assignment on Attributes",
+  category: "Assignment",
+  excerpt: "Assignment on Attributes by Md Mazidul Islam, 1st Semester, Department of Statistics, Pachhunga University College.",
+  date: "2026-10",
+  readMins: 1,
+  content: "content/writings/attributes-assignment.html"
+}
     
   ],
 
