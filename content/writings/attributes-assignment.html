@@ -1,0 +1,63 @@
+<section class="assignment-download-page">
+  <div class="assignment-download-card">
+    <span class="eyebrow">WRITING · ASSIGNMENT</span>
+    <h2>Assignment on Attributes</h2>
+
+    <p>
+      Download the assignment on <strong>Attributes</strong> by
+      <strong>Md Mazidul Islam</strong>, 1st Semester, Department of Statistics,
+      Pachhunga University College.
+    </p>
+
+    <div class="assignment-meta">
+      <span>1st Semester</span>
+      <span>Department of Statistics</span>
+      <span>Pachhunga University College</span>
+    </div>
+
+    <form id="assignmentDownloadForm"
+          action="https://formsubmit.co/mazidulrough@gmail.com"
+          method="POST">
+
+      <input type="hidden" name="_subject"
+             value="Assignment download — Attributes">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="assignment-email-field">
+        <label for="downloadEmail">Enter your email to download</label>
+        <input id="downloadEmail"
+               type="email"
+               name="email"
+               placeholder="yourname@example.com"
+               autocomplete="email"
+               required>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Continue to Download <span>↓</span>
+      </button>
+
+      <p class="assignment-note">
+        Your email will be sent to the site owner before the download.
+      </p>
+    </form>
+  </div>
+</section>
+
+<script>
+(function () {
+  const form = document.getElementById("assignmentDownloadForm");
+
+  form.addEventListener("submit", function () {
+    const pdfUrl =
+      new URL("../assets/documents/Attributes.pdf", window.location.href).href;
+
+    const next = document.createElement("input");
+    next.type = "hidden";
+    next.name = "_next";
+    next.value = pdfUrl;
+    form.appendChild(next);
+  });
+})();
+</script>
