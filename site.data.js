@@ -81,7 +81,7 @@ const SITE = {
   category: "Assignment",
   excerpt: "Assignment on Attributes by Md Mazidul Islam, 1st Semester, Department of Statistics, Pachhunga University College.",
   date: "2026-10",
-  readMins: 1,
+  readMins: 8,
   content: "content/writings/attributes-assignment.html"
 } 
     
